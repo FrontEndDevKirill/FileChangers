@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>FileFantasy </title>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="../../css/styleProfile.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+				<a class="navbar-brand" href="#">FileFantasy</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="../../index.html"><i class="fa fa-download"></i> Загрузить файл</a></li>
+					<li><a href="../profileUser/refer.html">Реферальная система</a></li>
+					<li><a href="../AllFile.html">Все файлы</a></li>
+				</ul>
+				<div class="in">
+					<p class="username">Добро пожаловать <a href="" class="user btn btn-warning btn-xs"><i class="fa fa-user"></i> USERNAME</a></p>
+				</div>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="menu col-xs-2">
+					<ul class="nav menuProfile">
+						<li class="money">БАЛАНС RUB <span id="moneyT"></span> <i class="fa fa-ruble"></i></li>
+						<p>Главная</p>
+						<li><a href="../profileUser/profile.html"><i class="fa fa-line-chart"></i> Статистика</a></li>
+						<p>Файлы</p>
+						<li><a href="../profileUser/uploadfile.html"><i class="fa fa-cloud-download"></i> Загрузить файл</a></li>
+						<li><a href="../profileUser/mineFile.html"><i class="fa fa-file"></i> Мои файлы</a></li>
+						<li><a href="../profileUser/tarif.html"><i class="fa fa-asterisk"></i> Тарифы</a></li>
+						<p>Профильный раздел</p>
+						<li><a href="../profileUser/cash.html"><i class="fa fa-cc-visa"></i> Выплата</a></li>
+						<li><a href="../profileUser/wmNum.html"><i class="fa fa-money"></i> Кошелек</a></li>
+						<li><a href="../profileUser/rules.html"><i class="fa fa-info"></i> Правила</a></li>
+						<li><a href="../profileUser/refer.html"><i class="fa fa-male"></i> Рефералы</a></li>
+						<li><a href="../profileUser/bonus.html"><i class="fa fa-plus"></i> Бонусы</a></li>
+						<p>Админ панель</p>
+						<li><a href="users.html"><i class="fa fa-address-book"></i> Пользователи</a></li>
+						<li><a href="moneyUser.html"><i class="fa fa-diamond"></i> Ставки</a></li>
+						<li><a href="moneyPush.html"><i class="fa fa-mail-reply"></i> Заявки на выплаты</a></li>
+						<li><a href="news.html"><i class="fa fa-newspaper-o"></i> Новости</a></li>
+						<li><a href="filePanel.html"><i class="fa fa-file-o"></i> Файлы</a></li>
+						<p>Мой кабинет</p>
+						<li><a href="../profileUser/teh.html"><i class="fa fa-question"></i> Тех.Поддержка</a></li>
+						<li><a href="../regUser/log.html"><i class="fa fa-sign-out"></i> Выход</a></li>
+					</ul>
+				</div>
+				<div class="content col-xs-10">
+					<div class="teh">
+						<h3><i class="fa fa-newspaper-o"></i> Добавление новостей</h3>
+					</div>
+					<div class="teh">
+						<p>Добавление новости на главную страницу</p>
+						<textarea name="textarea" placeholder="Новость" class="textareaNews"></textarea> Добавить картунку :<input type="file" name="fileinput">
+					</div>
+					<div class="teh">
+						<p>Панель </p>
+						<input type="button" name="button" class="panetNewsBTN btn btn-info" value=" Добавить">
+						<input type="button" name="button" class="panetNewsBTN btn  btn-warning" value=" Изменить">
+						<input type="button" name="button" class="panetNewsBTN btn  btn-danger" value=" Удалить">
+					</div>
+					<div class="teh">
+						<h5>Каталог файлов :</h5>
+						<div class="file">
+							<div class="fileInfoItem1">Фото</div>
+							<div class="fileInfoItem2">Текст</div>
+							<div class="fileInfoItem3">Дата</div>
+							<div class="fileInfoItem3">Кнопка Изменить</div>
+						</div>
+						<hr>
+						<div class="file">
+							<div class="fileInfoItem1"><img src="../../img/Untitled-1-Recovered.jpg" width="40px" alt=""></div>
+							<div class="fileInfoItem2">C 25.05.2016 по 25.05.2017 будет тариф у всех х2</div>
+							<div class="fileInfoItem3">26.01.2016</div>
+							<div class="fileInfoItem3">
+								<input type="button" name="button" class="btn- btn-success filelistbtn" value="Изменить">
+							</div>
+						</div>
+						<br>
+						<div class="file">
+							<div class="fileInfoItem1"><img src="../../img/Untitled-1-Recovered.jpg" width="40px" alt=""></div>
+							<div class="fileInfoItem2">C 25.05.2016 по 25.05.2017 будет тариф у всех х2</div>
+							<div class="fileInfoItem3">26.01.2016</div>
+							<div class="fileInfoItem3">
+								<input type="button" name="button" class="btn- btn-success filelistbtn" value="Изменить">
+							</div>
+						</div>
+						<br>
+						<div class="file">
+							<div class="fileInfoItem1"><img src="../../img/Untitled-1-Recovered.jpg" width="40px" alt=""></div>
+							<div class="fileInfoItem2">C 25.05.2016 по 25.05.2017 будет тариф у всех х2</div>
+							<div class="fileInfoItem3">26.01.2016</div>
+							<div class="fileInfoItem3">
+								<input type="button" name="button" class="btn- btn-success filelistbtn" value="Изменить">
+							</div>
+						</div>
+						<br>
+						<div class="file">
+							<div class="fileInfoItem1"><img src="../../img/Untitled-1-Recovered.jpg" width="40px" alt=""></div>
+							<div class="fileInfoItem2">C 25.05.2016 по 25.05.2017 будет тариф у всех х2</div>
+							<div class="fileInfoItem3">26.01.2016</div>
+							<div class="fileInfoItem3">
+								<input type="button" name="button" class="btn- btn-success filelistbtn" value="Изменить">
+							</div>
+						</div>
+						<br>
+						<div class="file">
+							<div class="fileInfoItem1"><img src="../../img/Untitled-1-Recovered.jpg" width="40px" alt=""></div>
+							<div class="fileInfoItem2">C 25.05.2016 по 25.05.2017 будет тариф у всех х2</div>
+							<div class="fileInfoItem3">26.01.2016</div>
+							<div class="fileInfoItem3">
+								<input type="button" name="button" class="btn- btn-success filelistbtn" value="Изменить">
+							</div>
+						</div>
+						<br>
+						<div class="file">
+							<div class="fileInfoItem1"><img src="../../img/Untitled-1-Recovered.jpg" width="40px" alt=""></div>
+							<div class="fileInfoItem2">C 25.05.2016 по 25.05.2017 будет тариф у всех х2</div>
+							<div class="fileInfoItem3">26.01.2016</div>
+							<div class="fileInfoItem3">
+								<input type="button" name="button" class="btn- btn-success filelistbtn" value="Изменить">
+							</div>
+						</div>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/npm.js"></script>
+	<script src="../../js/jquery-3.2.1.slim.min.js"></script>
+	<script src="../../js/cash.js"></script>
+</body>
+
+</html>

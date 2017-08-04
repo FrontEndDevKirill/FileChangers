@@ -1,0 +1,512 @@
+body {
+	background-color: rgba(45, 48, 56, 0.96);
+}
+
+.username {
+	color: #999;
+	float: right;
+	margin-top: 1%;
+}
+
+.user {
+	color: white;
+	;
+	font-size: 15px;
+	;
+}
+
+.username {}
+
+.wrapper {
+	margin-top: 4%;
+}
+
+.menu {
+	height: 100%;
+	background-color: #2A2D35;
+	color: white;
+}
+
+.nav {}
+
+.menuProfile li a {
+	left: 0;
+	width: 100%;
+	text-align: left;
+	color: #AFAFAF;
+}
+
+.money {
+	padding: 10px;
+	background-color: #EB9419;
+	color: black;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.menuProfile li a:hover {
+	background-color: #2A2D35;
+	color: #999;
+}
+
+.menuProfile p {
+	margin: 20px;
+	font-size: 12px;
+	font-style: italic;
+	font-variant: small-caps;
+}
+
+.teh {
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	text-align: left;
+	background-color: #2D3038;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.teh a {
+	font-size: 20px;
+	color: white;
+	padding-top: 10px;
+	font-style: italic;
+	text-decoration: none;
+}
+
+.cashbaack a {
+	font-size: 18px;
+	margin-top: 2px;
+	margin-left: 45px;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.teh a:hover {
+	font-size: 20px;
+	color: #595959;
+	padding-top: 10px;
+}
+
+.cashbaack a:hover {
+	color: black;
+	font-size: 18px;
+}
+
+.Stat {
+	margin: 10px;
+	width: 80%;
+	text-align: center;
+	height: 80px;
+	border-radius: 10px;
+}
+
+.Stat p {
+	font-size: 11px;
+	margin-top: -10px;
+}
+
+.statistic {
+	height: 100px;
+}
+
+p.moneyStat {
+	margin-top: 10px;
+	padding-top: 15px;
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+
+.item1 {
+	background-color: #EB951A;
+}
+
+.item2 {
+	background-color: #C83935;
+}
+
+.item3 {
+	background-color: #2A6396;
+}
+
+.item4 {
+	background-color: #469C46;
+}
+
+.statsTable {
+	padding: 10px;
+}
+
+td {
+	font-size: 18px;
+	border: 1px solid #fff;
+	height: 70px;
+	text-align: center;
+	border-radius: 10px;
+	height: 50px;
+}
+
+tr:hover {
+	background-color: rgba(153, 153, 153, 0.13);
+}
+
+tr {
+	border-radius: 10px;
+}
+
+th {
+	text-align: center;
+}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+	display: none;
+}
+
+.linkset {
+	color: #222;
+}
+
+.fa-trash {
+	color: #C83935;
+}
+
+.fa-trash:hover {
+	color: #9F100C;
+}
+
+.fa-cog {
+	color: #469C46;
+}
+
+.fa-cog:hover {
+	color: #287E28;
+}
+
+.fa-link {
+	color: #EB951A;
+}
+
+.fa-link:hover {
+	color: #BA6400;
+}
+
+.fa-file {
+	color: #EB9419;
+}
+
+.fa-line-chart {
+	color: #34AFD4;
+}
+
+.fa-cloud-download {
+	color: #2FAF2F;
+}
+
+.fa-asterisk {
+	color: #DB4C48;
+}
+
+.fa-internet-explorer {
+	color: aqua;
+}
+
+.textleft {
+	text-align: left;
+}
+
+.tarifitem {
+	text-align: left;
+	height: 20px;
+	font-size: 14px;
+}
+
+.fa-cc-visa {
+	color: gold;
+}
+
+.fa-money {
+	color: lightgreen;
+}
+
+.fa-info {
+	color: lightskyblue;
+}
+
+.fa-male {
+	color: burlywood;
+}
+
+.fa-plus {
+	color: lightgreen;
+}
+
+.fa-question {
+	color: yellow;
+}
+
+.fa-sign-out {
+	color: black;
+}
+
+.BTN {
+	font-size: 14px;
+	
+}
+
+input.form-control {
+	margin-left: 10px;
+	margin-top: 2%;
+	width: 80%;
+}
+
+.cah {
+	padding-top: 25px;
+	height: 100px;
+}
+
+.fa-history {
+	color: crimson;
+}
+
+.og {
+	color: yellow;
+}
+
+.good {
+	color: lightgreen;
+}
+
+.ot {
+	color: lightcoral;
+}
+
+.inputwm {
+	width: 300px;
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+	padding-left: 10px;
+}
+
+.inputwm:focus {
+	border: 1px solid #999;
+}
+
+.inputwm:hover {
+	border: 1px solid #999;
+}
+
+.wmA a {
+	font-size: 15px;
+	text-decoration: none;
+	font-style: normal;
+	padding: 0;
+	height: 38px;
+	padding: 10px;
+}
+
+.wmA a:hover {
+	padding: 10px;
+	color: black;
+	font-size: 15px;
+}
+
+dd {
+	margin-left: 25px;
+	margin-bottom: 5px;
+}
+
+dt {
+	margin-top: 1em;
+	/* Отступ сверху */
+}
+
+.ggggg {
+	width: 100px;
+	margin-left: 10px;
+	height: 40px;
+}
+
+a.downloadd {
+	font-style: normal;
+	font-size: 18px;
+}
+a.downloadd:hover {
+	font-style: normal;
+	font-size: 18px;
+	color: white;
+	opacity: 0.7;
+}
+
+.fa-calendar {
+	color: lightseagreen;
+}
+
+.fa-ruble {
+	color: lightgoldenrodyellow;
+}
+
+.searchB {
+	width: 80%;
+}
+
+a.searchbtn {
+	height: 35px;
+	padding-top: 3px;
+	width: 15%;
+	color: black;
+}
+a.searchbtn:hover {
+	height: 35px;
+	padding-top: 3px;
+	width: 15%;
+	color: black;
+	opacity: 0.8;
+}
+
+hr {
+	margin: 10px;
+}
+
+
+
+.fileInfoItem1 {
+	text-align: center;
+	width: 10%;
+	display: inline-block;
+}
+
+.fileInfoItem2 {
+		text-align: center;
+	width: 60%;
+	display: inline-block;
+}
+
+.fileInfoItem3 {
+		text-align: center;
+	width: 10%;
+	display: inline-block;
+}
+
+.filelistbtn {
+	color: #000;
+}
+
+.fa-address-book {
+	color: lightcoral;
+}
+
+.fa-diamond {
+	color: lightskyblue;
+}
+
+.fa-mail-reply {
+	color: darkcyan;
+}
+
+.fa-file-o {
+	color: darkorange;
+}
+
+.textareaNews {
+width: 99%;
+	height: 300px;
+	background-color: transparent;
+	color: white;
+	font-size: 20px;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+.panetNewsBTN {
+	color: black;
+}
+
+.InfoUserDiv {
+	margin: 10px;
+}
+
+.comboBox {
+	width: 100%;
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.comboBoxItem {
+	background-color: #444;
+	border: 1px solid black;;
+	color: #fff;
+	font-size: 15px;
+}
+.comboBoxItem:hover {
+	background-color: #999;
+
+}
+
+
+#dropZone {    
+    color: #555;
+    font-size: 18px;
+    text-align: center;    
+    
+    width: 90%;
+	height: 300px;
+    padding: 50px 0;
+    margin: 50px auto;
+	padding-top: 13%;
+    
+    background: #999;
+    border: 1px solid #222;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#dropZone.hover {
+    background: #ddd;
+    border-color: #aaa;
+}
+
+#dropZone.error {
+    background: #faa;
+    border-color: #f00;
+}
+
+#dropZone.drop {
+    background: #afa;
+    border-color: #0f0;
+}
+
+
+.bntSave {
+	color: #000;
+	
+}
+
+a.profileUserLink {
+	font-style: normal;
+}
+a.profileUserLink:hover {
+	font-style: normal;
+	opacity: 0.6;
+	color:white;
+}
+
+.fa-envelope {
+	color:aqua;
+}
+
+.dawnloadbtn {
+	width: 90%;
+	margin-left: 5%;
+	background-color: #999;
+	padding-left: 30%;
+}

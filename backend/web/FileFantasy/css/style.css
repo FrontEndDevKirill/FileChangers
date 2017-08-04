@@ -1,0 +1,169 @@
+body {
+	height: 100%;
+	text-align: center;
+
+	background-image: url("../img/background.jpg");
+ 	background-repeat: no-repeat;
+	background-size:;
+ 	
+ 	font-family: 'Oxygen', sans-serif;
+
+}
+.singinlogin {
+	margin-top: 7px;
+	margin-right: 10px;
+}
+#dropZone {
+	
+	background-image: url(../img/download.jpg);
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+    color: #000;
+    font-size: 18px;
+    text-align: center;    
+    
+    width: 100%;
+	height: 400px;
+    padding: 50px 0;
+	padding-top: 30%;
+    margin: 50px auto;
+    
+    
+    border: 1px solid #ccc;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#dropZone.hover {
+    background: #ddd;
+    border-color: #aaa;
+}
+
+#dropZone.error {
+    background: #faa;
+    border-color: #f00;
+}
+
+#dropZone.drop {
+    background: #afa;
+    border-color: #0f0;
+}
+
+
+.search {
+	width: 150px;
+}
+
+
+
+.in {
+	display: inline-block;
+	float: right;
+}
+
+.wrapper {
+	margin-top: 4%;
+}
+
+.logoNews {
+	float: left;
+}
+
+.news {
+	background-color: rgba(9, 9, 9, 0.4);
+	overflow-y: scroll;
+	max-height: 500px;
+}
+
+.textNews {
+	font-size: 12px;
+	text-align: right;
+}
+
+hr {
+
+	color: black;
+	background-color: black;
+	height: 1px;
+	width: 80%;
+	text-align: center;
+}
+
+h5 {
+	float: right;
+	background-color:#bbbbbb;
+	width: 80px;
+	text-align: right;
+	border-radius: 5px;
+	color:chocolate;
+}
+
+.dwonload {
+	display: block;
+}
+
+.input-group {
+width: 50%;
+	margin-left: 25%;
+}
+
+.content {
+	text-align: center;
+}
+
+footer {
+	background-color: #999;
+}
+
+.username {
+	color: white;
+	margin-top: 6%;
+}
+
+.user {
+	text-transform: uppercase;
+	color: #999;
+}
+
+
+
+.file {
+}
+
+input.loadMore {
+}
+
+.form-control {
+	
+}
+
+.downloader {
+	margin-left: 10%;
+	opacity: 0.8;
+}
+.downloader:hover {
+	opacity: 1;
+	cursor:pointer;
+}
+
+.main {
+	color: white;
+	text-transform: uppercase;
+	padding-top: 20px;
+	
+}
+
+.Alert {
+	margin-top: 150px;
+	margin-bottom: 20px;
+}
+
+.filer {
+	margin-left: 15%;
+	position: absolute;
+	cursor: pointer;
+}
