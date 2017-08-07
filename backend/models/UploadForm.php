@@ -14,11 +14,13 @@ use yii\base\Model;
 class UploadForm extends Model
 {
     public $imageFile;
+    public $name;
 
     public function rules()
     {
         return [
-            [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            [['imageFile'], 'file', 'skipOnEmpty' => false],
+            [['name'], 'required'],
         ];
     }
 

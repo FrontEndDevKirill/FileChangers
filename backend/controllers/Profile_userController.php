@@ -38,31 +38,48 @@ class Profile_userController extends AppController
 
     }
 
-    public function actionOne()
-    {
-        echo 21;
-    }
-
     public function actionUpload_file()
     {
-        return $this->render('upload_file');
+        $model = new UploadForm();
+
+        return $this->render('upload_file', compact('model'));
     }
 
     public function actionUpload()
     {
+
         $model = new UploadForm();
+        $files = new Files();
 
         if (Yii::$app->request->isPost) {
 
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            $model->name = Yii::$app->request->post('UploadForm')['name'];
 
-            var_dump($model->imageFile);die;
+            if($model->imageFile.size < 20000000 && $model->imageFile.type != 'php') {
+                if($model->validate()) {
+                    if ($model->upload()) {
 
-            if ($model->upload()) {
-                // file is uploaded successfully
-                return 2;
+                        $files->id_user = Yii::$app->user->identity->id;
+                        $files->data = date("Y-m-d H:i:s");
+                        $files->src = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
+                        $files->name_file = $model->name;
+
+                        if ($files->save()) {
+                            $this->redirect("");
+                        }else{
+                            echo "Ошибка записи в БД";
+                        }
+
+                    } else {
+
+                        echo "Ошибка Данных";
+
+                    }
+                }
+            } else{
+                echo "Файл слишком большой, максимальный размер 20 мб";
             }
-
         }
 
         //return $this->render('upload', ['model' => $model]);

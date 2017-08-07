@@ -71,6 +71,7 @@
                             <th><i class="fa fa-money"></i><br> Прибыль загрузок</th>
 <!--                            <th><i class="fa fa-money"></i><br> Прибыль рекламы</th>-->
 <!--                            <th><i class="fa fa-money"></i><br> Прибыль рефералов</th>-->
+                            <th><i class="fa fa-money"></i><br> Имя файла</th>
                             <th><i class="fa fa-money"></i><br> Общий зарабаток</th>
                         </tr>
                         </thead>
@@ -83,6 +84,7 @@
                                 <td><?= $data_file['count_download'] ?></td>
                                 <td><?= $data_file['count_install'] ?></td>
                                 <td><?= $data_file['count_install'] / $bonus['bonus'] ?>.руб</td>
+                                <td><?= $data_file['name_file'] ?></td>
 <!--                                <td>--><?//= $data_file['count_install'] ?><!--</td>-->
 <!--                                <td>0.0 <i class="fa fa-ruble"></i></td>-->
                                 <td>Их нет, тебя наедали</td>

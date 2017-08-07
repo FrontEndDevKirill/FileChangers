@@ -72,6 +72,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `ip_download` tinytext NOT NULL,
   `src` varchar(510) NOT NULL,
   `image_src` varchar(510) NOT NULL,
+  `name_file` varchar(510) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 

@@ -47,7 +47,7 @@ $config = [
             'enableStrictParsing' => false,
 
             'rules' => [
-                'fonts/<data:\w+>' => 'fonts/<data>',
+//                'fonts/<data:\w+>' => 'fonts/<data>',
 //                '<action:(about|contact|login)>' => 'site/<action>'
 //                '<action:\w+>' => 'site/<action>'//\w+
 

@@ -6,9 +6,18 @@ use app\models\Form_sign_in;
 use app\models\Login;
 use app\models\User;
 use Yii;
+use yii\web\Controller;
 
-class UserController extends AppController
+class UserController extends Controller
 {
+
+    function __construct($id = 0, $module = 0, array $config = [])
+    {
+        if(!Yii::$app->user->isGuest){
+            $this->redirect("/profile_user/profile");
+        }
+        parent::__construct($id, $module, $config);
+    }
 
     public $layout = "basic";
 
@@ -36,7 +45,7 @@ class UserController extends AppController
 
         if($sign_in->save()){
 
-            var_dump('true');
+            $this->redirect("/profile_user/profile");
 
         }else{
 
@@ -63,8 +72,8 @@ class UserController extends AppController
         if($model->validate()){
 
             Yii::$app->user->login($model->getUser());
+            $this->redirect("/profile_user/profile");
 
-            var_dump(Yii::$app->user->identity->login);
         }else{
             var_dump(false);
             //return $this->render('login', compact('model'));
