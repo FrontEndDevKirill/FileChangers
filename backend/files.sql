@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 04 2017 г., 21:06
+-- Время создания: Авг 08 2017 г., 22:49
 -- Версия сервера: 5.5.41-log
 -- Версия PHP: 5.6.3
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `bonus` (
   `bonus` float NOT NULL DEFAULT '1',
   `shave` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `bonus`
@@ -70,9 +70,12 @@ CREATE TABLE IF NOT EXISTS `files` (
   `count_download` int(11) NOT NULL,
   `count_install` int(11) NOT NULL,
   `ip_download` tinytext NOT NULL,
+  `size` int(11) NOT NULL,
   `src` varchar(510) NOT NULL,
   `image_src` varchar(510) NOT NULL,
-  `name_file` varchar(510) NOT NULL,
+  `name_file` varchar(255) NOT NULL,
+  `fake_download` int(11) NOT NULL DEFAULT '0',
+  `fake_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -80,11 +83,11 @@ CREATE TABLE IF NOT EXISTS `files` (
 -- Дамп данных таблицы `files`
 --
 
-INSERT INTO `files` (`id`, `id_user`, `data`, `count_download`, `count_install`, `ip_download`, `src`, `image_src`) VALUES
-(1, 18, '2017-08-03 21:00:00', 33, 3, '', 'ssilka', 'images_silka'),
-(2, 18, '2017-08-01 21:00:00', 44, 4, '', 'ssilka_44', 'ssilka_44_images'),
-(3, 18, '2017-08-04 11:47:35', 333, 33, '', 'ssilka4', 'images_silka4'),
-(4, 18, '2017-08-04 11:47:40', 444, 44, '', 'ssilka_444', 'ssilka_444_images4');
+INSERT INTO `files` (`id`, `id_user`, `data`, `count_download`, `count_install`, `ip_download`, `size`, `src`, `image_src`, `name_file`, `fake_download`, `fake_date`) VALUES
+(1, 18, '2017-08-08 18:42:29', 33, 3, '', 123, 'uploasd/ziper.zip', 'images_silka', '', 722, '0000-00-00 00:00:00'),
+(2, 18, '2017-08-08 07:59:52', 44, 4, '', 12312, 'uploasd/ziper.zip', 'ssilka_44_images', '', 123, '0000-00-00 00:00:00'),
+(3, 18, '2017-08-08 07:59:53', 333, 33, '', 345, 'ssilka4', 'images_silka4', '', 234, '0000-00-00 00:00:00'),
+(4, 18, '2017-08-08 18:59:14', 444, 44, '', 543, 'ssilka_444', 'ssilka_444_images4', 'Имя файла', 345, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -108,13 +111,22 @@ CREATE TABLE IF NOT EXISTS `Payments` (
 --
 
 CREATE TABLE IF NOT EXISTS `rates` (
-  `unique` float NOT NULL,
-  `install_amigo` float NOT NULL,
-  `shive` float NOT NULL,
-  `amigo_shive` float NOT NULL,
-  `count_install_full` int(11) NOT NULL,
-  `count_install__amigo_full` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `unique` float DEFAULT NULL,
+  `install_amigo` float DEFAULT NULL,
+  `shive` float DEFAULT NULL,
+  `amigo_shive` float DEFAULT NULL,
+  `count_install_full` int(11) DEFAULT NULL,
+  `count_install__amigo_full` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Дамп данных таблицы `rates`
+--
+
+INSERT INTO `rates` (`id`, `unique`, `install_amigo`, `shive`, `amigo_shive`, `count_install_full`, `count_install__amigo_full`) VALUES
+(3, NULL, NULL, 4, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
