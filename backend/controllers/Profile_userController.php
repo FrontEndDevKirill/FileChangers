@@ -64,6 +64,7 @@ class Profile_userController extends AppController
                         $files->data = date("Y-m-d H:i:s");
                         $files->src = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
                         $files->name_file = $model->name;
+                        $files->size = $model->imageFile.size;
 
                         if ($files->save()) {
                             $this->redirect("");

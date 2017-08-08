@@ -13,6 +13,9 @@ use yii\db\ActiveRecord;
 
 class Files extends ActiveRecord
 {
+
+
+
     public static function tableName()
     {
         return "files";
@@ -22,6 +25,34 @@ class Files extends ActiveRecord
     {
         $id = Yii::$app->user->identity->id;
         return $this->find()->asArray()->where(["id_user" => $id])->all();
+    }
+
+    public function get_file($id_user, $id_file)
+    {
+
+        $file = $this->find()->where(['id_user' => $id_user, 'id' => $id_file])->asArray()->all()[0];
+        return $file;
+
+    }
+
+    public function rules()
+    {
+        return [
+            [['imageFile'], 'file', 'skipOnEmpty' => false],
+            [['name'], 'required'],
+        ];
+    }
+
+    public function upload()
+    {
+
+        if ($this->validate()) {
+            $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
 

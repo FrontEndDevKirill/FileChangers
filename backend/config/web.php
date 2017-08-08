@@ -12,7 +12,7 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'qwdqwdqwwz',
             'baseUrl' => '',
-//            'defaultRoute' => 'table',
+//            'defaultRoute' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -47,6 +47,9 @@ $config = [
             'enableStrictParsing' => false,
 
             'rules' => [
+                ''              => 'profile_user/profile',
+                'mine_file'     => 'mine_file/default',
+                'mine_file/edit/<id_user:\d+>/<id_file:\d+>'     => 'mine_file/edit',
 //                'fonts/<data:\w+>' => 'fonts/<data>',
 //                '<action:(about|contact|login)>' => 'site/<action>'
 //                '<action:\w+>' => 'site/<action>'//\w+

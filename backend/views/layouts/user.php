@@ -8,6 +8,9 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\ProfileAsset;
+use yii\helpers\Url;
+
+
 
 ProfileAsset::register($this);
 ?>
@@ -47,14 +50,37 @@ ProfileAsset::register($this);
                 <li><a href="../AllFile.html">Все файлы</a></li>
             </ul>
             <div class="in">
-                <p class="username">Добро пожаловать <a href="profile.html" class="user btn btn-warning btn-xs"><i class="fa fa-user"></i> USERNAME</a></p>
+                <p class="username">Добро пожаловать <a href="profile.html" class="user btn btn-warning btn-xs"><i class="fa fa-user"></i> <?= Yii::$app->user->identity->login ?></a></p>
             </div>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
 </nav>
-
+<div class="">
+    <div class="">
+        <div class="menu col-xs-2">
+            <ul class="nav menuProfile">
+                <li class="money">БАЛАНС RUB <span id="moneyT"></span> <i class="fa fa-ruble"></i></li>
+                <p>Главная</p>
+                <li><a href="<?= Url::to('/profile_user/profile') ?>"><i class="fa fa-line-chart"></i> Статистика</a></li>
+                <p>Файлы</p>
+                <li><a href="<?= Url::to('/profile_user/upload_file') ?>"><i class="fa fa-cloud-download"></i> Загрузить файл</a></li>
+                <li><a href="<?= Url::to('/mine_file') ?>"><i class="fa fa-file"></i> Мои файлы</a></li>
+                <li><a href="tarif.html"><i class="fa fa-asterisk"></i> Тарифы</a></li>
+                <p>Профильный раздел</p>
+                <li><a href="cash.html"><i class="fa fa-cc-visa"></i> Выплата</a></li>
+                <li><a href="wmNum.html"><i class="fa fa-money"></i> Кошелек</a></li>
+                <li><a href="rules.html"><i class="fa fa-info"></i> Правила</a></li>
+                <li><a href="refer.html"><i class="fa fa-male"></i> Рефералы</a></li>
+                <li><a href="bonus.html"><i class="fa fa-plus"></i> Бонусы</a></li>
+                <p>Мой кабинет</p>
+                <li><a href="teh.html"><i class="fa fa-question"></i> Тех.Поддержка</a></li>
+                <li><a href="../regUser/log.html"><i class="fa fa-sign-out"></i> Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 <!-- Left menu end -->
 
 <?= $content ?>

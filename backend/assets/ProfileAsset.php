@@ -10,14 +10,14 @@ class ProfileAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
 
-        'https://fonts.googleapis.com/icon?family=Material+Icons',
-        'css/styleProfile.css',
-        'css/font-awesome.min.css',
-        'css/fontawesome-webfont.woff2',
-        'css/fontawesome-webfont.woff',
-        'css/fontawesome-webfont.ttf',
-        'https://code.getmdl.io/1.3.0/material.indigo-pink.min.css',
 
+        'css/font-awesome.min.css',
+        'fonts/fontawesome-webfont.woff2',
+        'fonts/fontawesome-webfont.woff',
+        'fonts/fontawesome-webfont.ttf',
+        'https://fonts.googleapis.com/icon?family=Material+Icons',
+        'https://code.getmdl.io/1.3.0/material.indigo-pink.min.css',
+        'css/styleProfile.css',
     ];
     public $cssOptions = [
         'type' => 'text/css',
