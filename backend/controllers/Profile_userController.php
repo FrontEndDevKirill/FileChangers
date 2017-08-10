@@ -49,7 +49,7 @@ class Profile_userController extends AppController
     {
 
         $model = new UploadForm();
-        $files = new Files();
+        $files = new Files(['scenario' => Files::SCENARIO_UPLOAD]);
 
         if (Yii::$app->request->isPost) {
 
@@ -66,8 +66,8 @@ class Profile_userController extends AppController
                         $files->name_file = $model->name;
                         $files->size = $model->imageFile.size;
 
-                        if ($files->save()) {
-                            $this->redirect("");
+                        if ( $files->save() ) {
+                            return $this->redirect("/mine_file");
                         }else{
                             echo "Ошибка записи в БД";
                         }
@@ -77,12 +77,17 @@ class Profile_userController extends AppController
                         echo "Ошибка Данных";
 
                     }
+                }else{
+                    echo "Валидация";
                 }
             } else{
                 echo "Файл слишком большой, максимальный размер 20 мб";
             }
-        }
+        }else{
 
+            echo 1;
+
+        }
         //return $this->render('upload', ['model' => $model]);
     }
 

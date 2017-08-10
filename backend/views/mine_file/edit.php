@@ -15,14 +15,7 @@
 
                     <?php
 
-                    $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'class'=>'text-center'], 'action' => '/profile_user/upload']) ?>
-
-                    <div id="dropZone">
-                        Для загрузки, перетащите файл сюда.
-                        <p>Максимальный размер файла 20мб</p>
-                        <br>
-                        <p>Или вы можете нажать на кнопку ниже </p>
-                    </div>
+                    $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'class'=>'text-center'], 'action' => '/mine_file/edit_save']) ?>
 
                         <table class="table">
                             <thead>
@@ -36,19 +29,19 @@
                             <tr>
                                 <td>Имя файла</td>
                                 <td>NameFile</td>
-                                <td><input type="text" class="inputwm" name="wm" placeholder="Новое имя файла" value="<?= $file['name_file'] ?>"></td>
+                                <td><input type="text" class="inputwm" name="UploadForm['name_files']" placeholder="Новое имя файла" value="<?= $file['name_file'] ?>"></td>
 
                             </tr>
                             <tr>
                                 <td>Загрузки (фейк)</td>
                                 <td>0</td>
-                                <td><input type="text" class="inputwm" name="wm" placeholder="Добавить фейк скачек" value="<?= $file['fake_download'] ?>"></td>
+                                <td><input type="text" class="inputwm" name="UploadForm['fake_download']" placeholder="Добавить фейк скачек" value="<?= $file['fake_download'] ?>"></td>
 
                             </tr>
                             <tr>
                                 <td>Дата загругки</td>
                                 <td>25.06.2016</td>
-                                <td><input type="text" class="inputwm" name="wm" placeholder="Новая дата" value="<?= $file['fake_date'] ?>"></td>
+                                <td><input type="text" class="inputwm" name="UploadForm['fake_date']" placeholder="Новая дата" value="<?= $file['fake_date'] ?>"></td>
 
                             </tr>
                             <tr>
@@ -56,11 +49,11 @@
                                 <td>Фото</td>
                                 <td><img src="<?= $file['image_src'] ?>" width="40" height="40" alt=""></td>
                                 <td>
-                                    <?= $form->field($files, 'imageFile')->fileInput(['class'=>'btn btn-lg dawnloadbtn']) ?>
+                                    <?= $form->field($model, 'imageFile')->fileInput(['class'=>'btn btn-lg dawnloadbtn']) ?>
                                 </td>
-
                             </tr>
                             </tbody>
+
                         </table>
 
                         <div class="text-center">

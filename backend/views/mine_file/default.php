@@ -42,7 +42,7 @@ use yii\helpers\Url;
                                 <td>
                                     <a href="" title="Скопировать в буфер обмена ссылку на файл" class="linkset"><i class="fa fa-link"></i></a>
                                     <a href="<?= Url::to("/mine_file/edit/".$data_file['id_user']."/".$data_file['id']) ?>" class="setset" title="Настройки файла"><i class="fa fa-cog"></i></a>
-                                    <a href="" title="Удалить файл" class="delset"><i class="fa fa-trash"></i></a>
+                                    <a href="<?= Url::to("/mine_file/delete_file/".$data_file['id_user']."/".$data_file['id']) ?>" title="Удалить файл" class="delset"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
