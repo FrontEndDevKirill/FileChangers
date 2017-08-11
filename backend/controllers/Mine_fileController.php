@@ -12,6 +12,7 @@ use app\models\Files;
 use app\models\Rates;
 use app\models\UploadForm;
 use Yii;
+use yii\helpers\AppFunc;
 use yii\helpers\Url;
 use yii\web\UploadedFile;
 
@@ -37,6 +38,8 @@ class Mine_fileController extends AppController
     {
         $request = Yii::$app->request;
 
+
+
         if($request->isGet){
 
             $files = new Files();
@@ -46,7 +49,7 @@ class Mine_fileController extends AppController
 
             $file = $files->get_file($get['id_user'], $get['id_file']);
 
-            return $this->render("edit", compact('file', 'model'));
+            return $this->render("edit", compact('file', 'model', 'get'));
 
         }
 
@@ -75,49 +78,52 @@ class Mine_fileController extends AppController
     public function actionEdit_save()
     {
 
-        $model = new UploadForm(['scenario' => UploadForm::SCENARIO_EDIT_UPLOAD]);
-        $files = new Files();
-
         if (Yii::$app->request->isPost) {
 
+            $model = new UploadForm(['scenario' => UploadForm::SCENARIO_EDIT_UPLOAD]);
+            $files = new Files(['scenario' => Files::SCENARIO_EDIT_UPLOAD]);
+
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
-            $uploadForm = Yii::$app->request->post('UploadForm');
-            $files->name_files = $uploadForm->name_files;
-            $files->fake_download = $uploadForm->fake_download;
-            $files->fake_date = $uploadForm->fake_date;
-            debug($model);die;
 
+            $post_files = Yii::$app->request->post()['Files'];
+            $id_user    = Yii::$app->request->post()['id_user'];
+            $id_file    = Yii::$app->request->post()['id_file'];
 
-            //$model->load(Yii::$app->request->post('UploadForm'));
-
-
-//var_dump($model);die;
-
-            if($model->imageFile.size < 20000000 && $model->imageFile.type != 'php') {
+            if($model->imageFile.size < 20000000 && $model->imageFile.type != 'php' || $model->imageFile == null) {
                 if($model->validate()) {
-//                    if ($model->upload()) {
-//
-////                        $files->id_user = Yii::$app->user->identity->id;
-////                        $files->data = date("Y-m-d H:i:s");
-////                        $files->src = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
-////                        $files->name_file = $model->name;
-////                        $files->size = $model->imageFile.size;
-////
-////                        if ($files->save()) {
-////                            $this->redirect("");
-////                        }else{
-////                            echo "Ошибка записи в БД";
-////                        }
-//
-//                    } else {
-//
-//                        echo "Ошибка Данных";
-//
-//                    }
+
+                    $files_get = $files->find()->where(['id_user' => $id_user, 'id' => $id_file])->one();
+
+                    if($model->imageFile !== null){
+
+                        if ($model->upload()) {
+                            @unlink($files_get->image_src);
+                            $files_get->image_src = 'uploads/logo_files/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
+                        } else {
+                            echo "Ошибка Данных";
+                        }
+
+                    }
+
+                    $files_get->name_file = $post_files['name_file'];
+                    $files_get->fake_download = $post_files['fake_download'];
+                    $files_get->fake_date = $post_files['fake_date'];
+
+
+                    if($files_get->update() !== false){
+                        return $this->redirect(['/mine_file']);
+                    }else{
+                        echo 'Ошибка БД';
+                    }
+
+                }else{
+                    echo "false images";
                 }
             } else{
                 echo "Файл слишком большой, максимальный размер 20 мб";
             }
+        }else{
+            echo 'no post';
         }
 
     }

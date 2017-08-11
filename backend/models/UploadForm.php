@@ -16,16 +16,19 @@ class UploadForm extends Model
     public $imageFile;
     public $name;
 
+    const SCENARIO_UPLOAD = 'upload';
+    const SCENARIO_EDIT_UPLOAD = 'edit_upload';
+
     public function rules()
     {
         return [
 
-            [['imageFile'], 'file', 'skipOnEmpty' => false ],
+            [['imageFile'], 'file', 'skipOnEmpty' => false  , 'on' => self::SCENARIO_UPLOAD],
 
 
             /*------------------*/
 
-            [['imageFile'], 'file', 'skipOnEmpty' => false ],
+            [['imageFile'], 'file', 'skipOnEmpty' => true , 'on' => self::SCENARIO_EDIT_UPLOAD] ,
 
 
         ];

@@ -29,23 +29,30 @@
                             <tr>
                                 <td>Имя файла</td>
                                 <td>NameFile</td>
-                                <td><input type="text" class="inputwm" name="UploadForm['name_files']" placeholder="Новое имя файла" value="<?= $file['name_file'] ?>"></td>
+                                <td><input type="text" class="inputwm" name="Files[name_file]" placeholder="" value="<?= $file['name_file'] ?>"></td>
 
                             </tr>
                             <tr>
                                 <td>Загрузки (фейк)</td>
                                 <td>0</td>
-                                <td><input type="text" class="inputwm" name="UploadForm['fake_download']" placeholder="Добавить фейк скачек" value="<?= $file['fake_download'] ?>"></td>
+                                <td><input type="text" class="inputwm" name="Files[fake_download]" placeholder="" value="<?= $file['fake_download'] ?>"></td>
 
                             </tr>
                             <tr>
                                 <td>Дата загругки</td>
                                 <td>25.06.2016</td>
-                                <td><input type="text" class="inputwm" name="UploadForm['fake_date']" placeholder="Новая дата" value="<?= $file['fake_date'] ?>"></td>
+                                <td><input type="text" class="inputwm" name="Files[fake_date]" placeholder="" value="<?= $file['fake_date'] ?>"></td>
+
+                            </tr>
+                            <tr style="display:none;">
+                                <td><input type="text" class="inputwm" name="id_user" placeholder="" value="<?= $get['id_user'] ?>"></td>
+
+                            </tr>
+                            <tr style="display:none;">
+                                <td><input type="text" class="inputwm" name="id_file" placeholder="" value="<?= $get['id_file'] ?>"></td>
 
                             </tr>
                             <tr>
-
                                 <td>Фото</td>
                                 <td><img src="<?= $file['image_src'] ?>" width="40" height="40" alt=""></td>
                                 <td>

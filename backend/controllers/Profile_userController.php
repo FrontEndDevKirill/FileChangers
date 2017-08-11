@@ -10,6 +10,7 @@ namespace app\controllers;
 
 
 use app\models\UploadForm;
+use yii\helpers\AppFunc;
 use yii\web\Controller;
 use app\models\Files;
 use app\models\Bonus;
@@ -48,7 +49,7 @@ class Profile_userController extends AppController
     public function actionUpload()
     {
 
-        $model = new UploadForm();
+        $model = new UploadForm(['scenario' => UploadForm::SCENARIO_UPLOAD]);
         $files = new Files(['scenario' => Files::SCENARIO_UPLOAD]);
 
         if (Yii::$app->request->isPost) {
@@ -62,7 +63,8 @@ class Profile_userController extends AppController
 
                         $files->id_user = Yii::$app->user->identity->id;
                         $files->data = date("Y-m-d H:i:s");
-                        $files->src = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
+                        //Написать генератор уникального имени, точнее подключить чтобы он работал  AppHelper::name_generator
+                        $files->src = 'uploads/' . AppFunc::name_generator('uploads/',$model->imageFile->extension) . '.' . $model->imageFile->extension;
                         $files->name_file = $model->name;
                         $files->size = $model->imageFile.size;
 

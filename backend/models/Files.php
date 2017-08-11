@@ -15,7 +15,6 @@ use yii\db\Exception;
 class Files extends ActiveRecord
 {
 
-
     const SCENARIO_UPLOAD = 'upload';
     const SCENARIO_EDIT_UPLOAD = 'edit_upload';
 
@@ -57,7 +56,6 @@ class Files extends ActiveRecord
             }
         }
 
-        var_dump($res);
         return $res;
 
     }
@@ -70,10 +68,10 @@ class Files extends ActiveRecord
 
             /*------------------*/
 
-            [['fake_download', 'name_files', 'fake_date'], 'required' , 'on' => self::SCENARIO_EDIT_UPLOAD],
+            [['fake_download', 'name_file', 'fake_date'], 'required' , 'on' => self::SCENARIO_EDIT_UPLOAD],
             [['fake_download'], 'integer', 'min' => 0, 'on' => self::SCENARIO_EDIT_UPLOAD],
-            [['fake_date'],  'date', 'format' => 'yyyy-MM-dd hh:mm:ss', 'on' => self::SCENARIO_EDIT_UPLOAD],
-            [['src'], 'required' , 'on' => self::SCENARIO_EDIT_UPLOAD],
+            //[['fake_date'],  'date', 'format' => 'yyyy-MM-dd hh:mm:ss', 'on' => self::SCENARIO_EDIT_UPLOAD],
+
 
         ];
     }
