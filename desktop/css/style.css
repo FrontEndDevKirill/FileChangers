@@ -114,21 +114,18 @@ img.pull-left { margin-right: 10px; }
 	margin-top: 40px;
 }
 .imgMoney{
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
-}
-.imgMoney:hover{
 	-webkit-filter: grayscale(0%);
 	-moz-filter: grayscale(0%);
 	-ms-filter: grayscale(0%);
 	-o-filter: grayscale(0%);
 	filter: grayscale(0%);
 }
-h1,h2,h3,h4,h5,h6,p,pre,li,a,i{
-    font-family: 'OpenSans', arial;
+.imgMoney:hover{
+	-webkit-filter: grayscale(50%);
+	-moz-filter: grayscale(50%);
+	-ms-filter: grayscale(50%);
+	-o-filter: grayscale(50%);
+	filter: grayscale(50%);
 }
 .tarifs{
 	margin-top: 10px;

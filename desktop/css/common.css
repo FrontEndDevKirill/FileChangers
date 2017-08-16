@@ -1,0 +1,115 @@
+hr {
+  width: 90%;
+  margin-left: 5%;
+  border: 0.5px solid #333;
+}
+
+h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h5 a {
+  text-transform: none;
+  font-weight: 400;
+}
+
+h5 a:hover {
+  text-decoration: none;
+}
+
+h5 a:focus {
+  text-decoration: none;
+}
+
+.btn-group {
+  float: right;
+  margin-top: 0.5%;
+}
+
+.pull-left {
+  margin-left: 70px;
+}
+
+.pull-left li:hover {
+  background-color: #222;
+}
+
+.pull-left li a.actives {
+  font-weight: 600;
+  color: #fff;
+}
+
+.news ul li {
+  z-index: 0;
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+.news ul li img {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+.news ul li h6 {
+  background-color: lightgreen;
+  border-radius: 10px;
+  padding: 3px;
+  float: right;
+  font-size: 9px;
+}
+
+.news ul li p {
+  font-size: 13px;
+  margin-bottom: -10px;
+}
+
+.downloader {
+  text-align: center;
+}
+
+.downloader #dropzone {
+  padding-top: 15%;
+  padding-bottom: 15%;
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+  background-image: url("../img/cloud.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.downloader #dropzone:hover {
+  background-color: rgba(153, 153, 153, 0.3);
+  color: #000;
+}
+
+.important img {
+  margin-top: 45px;
+  margin-left: 30px;
+}
+
+.important p {
+  visibility: hidden;
+}
+
+.important .bstart {
+  margin-left: 30px;
+  position: absolute;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.solo {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.solo:hover {
+  text-shadow: 0px 1px 1px #333;
+}

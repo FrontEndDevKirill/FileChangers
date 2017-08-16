@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author"      content="">
-
-	<title>FantasyFile</title>
-
+	<meta name="author" content="">
+	<title>File</title>
 	<link rel="shortcut icon" href="">
-
-	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css" media="screen" >
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" media="screen">
 	<link rel="stylesheet" href="css/style.css">
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+	<link rel="stylesheet" href="css/common.css">
 </head>
 
 <body class="home">
 	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+	<div class="navbar navbar-inverse navbar-static-top headroom">
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
@@ -35,32 +25,58 @@
 				<a class="navbar-brand" href="index.html">FantasyFile</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="index.html">Главная</a></li>
-					<li><a href="document/AllFile.html">Все файлы</a></li>
+				<ul class="nav navbar-nav pull-left">
+					<li><a class="actives" href="index.html">Главная</a></li>
+					<li><a href="document/AllFile.html">Наши преимущества</a></li>
 					<li><a href="document/profileUser/teh.html">Контакты</a></li>
-					<li><a class="btn" href="document/regUser/log.html">Авторизация</a></li>
-					<li><a class="btn" href="document/regUser/reg.html">Регистрация</a></li>
 				</ul>
-			</div><!--/.nav-collapse -->
+				<div class="btn-group" role="group" aria-label="...">
+					<a href="document/regUser/log.html" class="btn btn-primary"><i class="fa fa-sign-in"></i> Авторизация</a>
+					<a href="document/regUser/reg.html" class="btn btn-danger"><i class="fa fa-user-plus"></i> Регистрация</a>
+				</div>
+			</div>
+			<!--/.nav-collapse -->
 		</div>
 	</div>
 	<!-- /.navbar -->
-
-	<!-- Header -->
-	<header id="head">
-		<div class="container-fluid">
-			<div class="row">
-				<form action="/upload.php">
-			      <div id="dropZone">
-			        Для загрузки, перетащите файл сюда.
-			      </div>
-			    </form>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 news">
+				<ul>
+					<li>
+						<img src="img/photo_2017-06-14_00-21-31.jpg" width="20" height="20" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quas maiores dolores mollitia culp</p>
+						<h6>25.03.2017</h6>
+					</li>
+					<li>
+						<img src="img/photo_2017-06-14_00-21-31.jpg" width="20" height="20" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quas maiores dolores mollitia culp</p>
+						<h6>25.03.2017</h6>
+					</li>
+					<li>
+						<img src="img/photo_2017-06-14_00-21-31.jpg" width="20" height="20" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quas maiores dolores mollitia culp</p>
+						<h6>25.03.2017</h6>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6 downloader">
+				<div class="dropzone" id="dropzone">Перетащите файл сюда</div>
+				<div class="upload-file">
+					<p id="text-pre-file"></p>
+					<div id="uploads">
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 important">
+				<a href="document/profileUser/profile.html" class="bstart btn btn-info btn-xs">Начни зарабатывать"</a>
+				<img src="img/fry.png" alt="">
 			</div>
 		</div>
-	</header>
-	<!-- /Header -->
-
+	</div>
+	<hr>
 	<!-- Intro -->
 	<div class="container text-center ggg">
 		<div class="row">
@@ -77,81 +93,121 @@
 		<div class="container">
 			<h3 class="text-center thin">Наши преимущества</h3>
 			<div class="row">
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Надежность</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
+				<div class="col-md-9">
+					<div id="accardion" class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title"><a href="#collapse-1" data-parent="#accardion" data-toggle="collapse">Быстрая работа</a></h4>
+							</div>
+							<div id="collapse-1" class="panel-collapse collapse">
+								<div class="panel-body">
+									<h4>Разнообразие животного мира нашей планеты настолько велико, что порой поражает и удивляет своим богатством и изобилием. Среди творений природы существуют не только симпатичные и милые существа. Встречаются редкие экземпляры, которые отталкивают своим непривлекательным внешним видом, и вполне достойны сниматься в фильмах ужасов. В топ-10 попали самые страшные животные в мире.</h4>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title"><a href="#collapse-2" data-parent="#accardion" data-toggle="collapse">Быстрая работа</a></h4>
+							</div>
+							<div id="collapse-2" class="panel-collapse collapse">
+								<div class="panel-body">
+									<h4>Разнообразие животного мира нашей планеты настолько велико, что порой поражает и удивляет своим богатством и изобилием. Среди творений природы существуют не только симпатичные и милые существа. Встречаются редкие экземпляры, которые отталкивают своим непривлекательным внешним видом, и вполне достойны сниматься в фильмах ужасов. В топ-10 попали самые страшные животные в мире.</h4>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title"><a href="#collapse-3" data-parent="#accardion" data-toggle="collapse">Быстрая работа</a></h4>
+							</div>
+							<div id="collapse-3" class="panel-collapse collapse">
+								<div class="panel-body">
+									<h4>Разнообразие животного мира нашей планеты настолько велико, что порой поражает и удивляет своим богатством и изобилием. Среди творений природы существуют не только симпатичные и милые существа. Встречаются редкие экземпляры, которые отталкивают своим непривлекательным внешним видом, и вполне достойны сниматься в фильмах ужасов. В топ-10 попали самые страшные животные в мире.</h4>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title"><a href="#collapse-4" data-parent="#accardion" data-toggle="collapse">Быстрая работа</a></h4>
+							</div>
+							<div id="collapse-4" class="panel-collapse collapse">
+								<div class="panel-body">
+									<h4>Разнообразие животного мира нашей планеты настолько велико, что порой поражает и удивляет своим богатством и изобилием. Среди творений природы существуют не только симпатичные и милые существа. Встречаются редкие экземпляры, которые отталкивают своим непривлекательным внешним видом, и вполне достойны сниматься в фильмах ужасов. В топ-10 попали самые страшные животные в мире.</h4>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Прибыть</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+				<div class="col-md-3 hidden-xs">
+					<div id="sitebar">
+						<!-- Sidebar -->
+						<div id="sidebar-wrapper">
+							<nav id="spy">
+								<ul class="sidebar-nav nav">
+									<li>
+										<a href="#collapse-1" data-parent="#accardion" data-toggle="collapse" data-scroll>
+											<span class="fa fa-flash solo">  Быстрая работа</span>
+										</a>
+									</li>
+									<li>
+										<a href="#collapse-2" data-parent="#accardion" data-toggle="collapse" data-scroll>
+											<span class="fa fa-flash solo">  Быстрая работа</span>
+										</a>
+									</li>
+									<li>
+										<a href="#collapse-3" data-parent="#accardion" data-toggle="collapse" data-scroll>
+											<span class="fa fa-flash solo">  Быстрая работа</span>
+										</a>
+									</li>
+									<li>
+										<a href="#collapse-4" data-parent="#accardion" data-toggle="collapse" data-scroll>
+											<span class="fa fa-flash solo">  Быстрая работа</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Тех.Поддержка</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Возможности</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
-					</div>
-				</div>
-			</div> <!-- /row  -->
-		
+			</div>
+			<!-- /row  -->
 		</div>
 	</div>
 	<!-- /Highlights -->
-
 	<!-- container -->
 	<div class="container">
-
 		<h2 class="text-center top-space">Наши тарифы</h2>
 		<br>
-
 		<div class="row">
 			<div class="col-md-12 tarifs">
 				<h1 class="bigText">1 скачивание - 8 Рублей </h1>
 			</div>
-		</div> <!-- /row -->
-
-		<div class="row">
-			<div class="col-md-12 tarifs">
-				<h1 class="bigText">1 скачивание Amigo - 10 Рублей </h1>
-			</div>
-		</div> <!-- /row -->
-
+		</div>
+		<!-- /row -->
+		<!-- /row -->
 		<div class="jumbotron top-space">
 			<h4>Начинай заработывать прямо сейчас !</h4>
-     		<p class="text-right"><a class="btn btn-primary btn-large">Регистрация</a></p>
-  		</div>
+			<p class="text-right"><a class="btn btn-primary btn-large">Регистрация</a></p>
+		</div>
+	</div>
+	<!-- /container -->
 
-</div>	<!-- /container -->
-	
 	<!-- Social links. @TODO: replace by link/instructions in template -->
 	<section id="social">
 		<div class="container">
 			<div class="wrapper clearfix">
 				<!-- AddThis Button BEGIN -->
 				<div class="addthis_toolbox addthis_default_style">
-				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-				<a class="addthis_button_tweet"></a>
-				<a class="addthis_button_linkedin_counter"></a>
-				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+					<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+					<a class="addthis_button_tweet"></a>
+					<a class="addthis_button_linkedin_counter"></a>
+					<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 				</div>
 				<!-- AddThis Button END -->
 			</div>
 		</div>
 	</section>
 	<!-- /social links -->
-
-
 	<footer id="footer" class="top-space">
-
 		<div class="footer1">
 			<div class="container">
 				<div class="row">
@@ -166,7 +222,6 @@
 							</p>
 						</div>
 					</div>
-
 					<div class="col-md-6">
 						<p class="widget-title">О нас</p>
 						<div class="widget-body">
@@ -174,18 +229,17 @@
 							<p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
 						</div>
 					</div>
-
-				</div> <!-- /row of widgets -->
+				</div>
+				<!-- /row of widgets -->
 			</div>
 		</div>
-
 		<div class="footer2">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.html">Главная</a> | 
+								<a href="index.html">Главная</a> |
 								<a href="document/AllFile.html">Все файлы</a> |
 								<a href="document/profileUser/teh.html">Контакты</a> |
 								<a href="document/regUser/log.html">Авторизация</a> |
@@ -193,23 +247,15 @@
 							</p>
 						</div>
 					</div>
-
-				</div> <!-- /row of widgets -->
+				</div>
+				<!-- /row of widgets -->
 			</div>
 		</div>
-
 	</footer>
-
-
-
-
-
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="js/headroom.min.js"></script>
-	<script src="js/jQuery.headroom.min.js"></script>
-	<script src="js/template.js"></script>
-	<script src="js/upload.js"></script>
+	<script src="js/uploader.js"></script>
 </body>
+
 </html>
